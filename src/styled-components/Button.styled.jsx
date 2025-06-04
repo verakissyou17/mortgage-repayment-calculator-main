@@ -1,0 +1,38 @@
+import styled from "styled-components";
+
+export const ButtonStyled = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 1em;
+  background-color: var(--Lime);
+  border-radius: 10rem;
+  gap: 0.5rem;
+  margin-top: 2em;
+  transition: all 0.3s ease-out;
+  background-color: ${({ theme }) =>
+    theme === "light" ? "var(--Lime)" : "var(--Slate-900)"};
+
+  button[type="submit"] {
+    background-color: ${({ theme }) =>
+      theme === "light" ? "var(--Lime)" : "var(--Slate-900)"};
+    color: ${({ theme }) =>
+      theme === "light" ? "var(--Slate-900)" : "var(--Lime)"};
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    opacity: 0.85;
+    scale: 0.95;
+  }
+
+  @media (min-width: 768px) {
+    flex-wrap: wrap;
+    width: 80%;
+    margin-top: 0;
+  }
+`;
