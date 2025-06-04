@@ -15,7 +15,7 @@ export const FooterStyled = styled.footer`
     object-fit: cover;
   }
 
-  h2, h5 {
+  h2 {
     color: var(--Slate-100);
     font-size: clamp(1rem, 0.648rem + 1.502vw, 2rem);
   }

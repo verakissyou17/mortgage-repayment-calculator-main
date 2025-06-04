@@ -30,9 +30,9 @@ function Footer(props) {
       ) : (
     <FooterStyled>
       <img src={emptyCard} alt={emptyCard} />
-      <h5>
+      <h2>
        Results shown here
-      </h5>
+      </h2>
       <p className="completion-request">Complete the form and click &apos;Calculate repayments&apos; to see what your monthly repayments would be.</p>
     </FooterStyled>
   )}
