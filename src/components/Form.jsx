@@ -17,6 +17,7 @@ function Form(props) {
   return (
     <FormStyled onSubmit={handleSubmit} aria-labelledby="mortgage-form-title">
       <fieldset>
+        <legend></legend>
         <FormContainer>
           <label htmlFor="amount">Mortgage Amount</label>
           <InputContainer theme={props.theme}>
@@ -36,7 +37,6 @@ function Form(props) {
               value={props.formValues.amount}
               onChange={props.handleInputChange}
               aria-required="true"
-              aria-label="Mortgage Amount"
               autoComplete="off"
             />
           </InputContainer>
@@ -52,7 +52,6 @@ function Form(props) {
                 value={props.formValues.term}
                 onChange={props.handleInputChange}
                 aria-required="true"
-                aria-label="Mortgage Term in years"
                 autoComplete="off"
               />
               <button
@@ -76,7 +75,6 @@ function Form(props) {
                 value={props.formValues.rate}
                 onChange={props.handleInputChange}
                 aria-required="true"
-                aria-label="Interest Rate Percentage"
                 autoComplete="off"
               />
               <button
@@ -93,6 +91,7 @@ function Form(props) {
         </div>
       </fieldset>
       <fieldset>
+        <legend></legend>
         <RadioContainer>
           <input
             type="radio"

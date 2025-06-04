@@ -4,7 +4,7 @@ import { HeaderStyled } from "../styled-components/Header.styled";
 function Header({ theme, toggleTheme }) {
   return (
     <HeaderStyled theme={theme}>
-      <button onClick={toggleTheme}>{theme === "light" ? "🌛" : "☀️"}</button>
+      <button type="button" onClick={toggleTheme}>{theme === "light" ? "🌛" : "☀️"}</button>
     </HeaderStyled>
   );
 }

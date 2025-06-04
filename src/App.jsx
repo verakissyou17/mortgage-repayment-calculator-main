@@ -17,10 +17,10 @@ function App() {
   const [hasSubmitted, setHasSubmitted] = useState(false);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    document.body.style.backgroundColor =
-      theme === "light" ? "var(--Slate-100)" : "var(--Dark-gray";
-  }, [theme]);
+useEffect(() => {
+  document.body.classList.toggle("light-theme", theme === "light");
+  document.body.classList.toggle("dark-theme", theme !== "light");
+}, [theme]);
 
   function calculateResults(values) {
     const amount = Number(values.amount);
@@ -94,7 +94,7 @@ function App() {
           handleReset={handleReset}
           setHasSubmitted={setHasSubmitted}
         />
-        <Footer theme={theme} results={results} />
+        <Footer theme={theme} results={results} hasSubmitted={hasSubmitted} />
       </ContainerStyled>
     </>
   );

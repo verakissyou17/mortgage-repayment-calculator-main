@@ -10,7 +10,7 @@ export const FormStyled = styled.form`
     border: none;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48em) {
     .term-rate {
       display: flex;
       gap: 1rem;
@@ -27,7 +27,7 @@ export const FormContainer = styled.div`
     margin-bottom: 0.5em;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48em) {
     margin-bottom: 0.75em;
 
     label {
@@ -92,7 +92,7 @@ export const InputContainer = styled.div`
     flex-basis: 8%;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48em) {
     .lira-btn {
       flex-basis: 15%;
     }
@@ -156,8 +156,7 @@ export const RadioContainer = styled.div`
     color: var(--Slate-700);
   }
 
-  @media (min-width: 768px) {
-    /* margin-block: 0.75em; */
+  @media (min-width: 48em) {
     padding: 1em;
   }
 `;

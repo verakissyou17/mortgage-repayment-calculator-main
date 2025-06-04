@@ -30,7 +30,7 @@ export const ButtonStyled = styled.div`
     scale: 0.95;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48em) {
     flex-wrap: wrap;
     width: 80%;
     margin-top: 0;

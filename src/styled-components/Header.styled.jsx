@@ -10,7 +10,6 @@ export const HeaderStyled = styled.header`
     border-radius: 0 6px 6px 10px;
     background-color: ${({ theme }) =>
       theme === "light" ? "var(--Slate-800)" : "var(--Slate-300)"};
-    transition: background-color 0.3s ease;
     display: block;
     margin-top: 0.5em;
     margin-left: auto;
@@ -18,4 +17,10 @@ export const HeaderStyled = styled.header`
     outline: none;
     cursor: pointer;
   }
+
+  @media (prefers-reduced-motion: no-preference) {
+  * {
+    transition: background-color 0.3s ease;
+  }
+}
 `;

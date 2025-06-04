@@ -6,10 +6,16 @@ export const FooterStyled = styled.footer`
   padding: 1.8em 1.3em;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: ${(props) => (props.hasSubmitted ? "space-between" : "center")};
+  align-items: ${(props) => (props.hasSubmitted ? "flex-start" : "center")};
   gap: 1rem;
+  img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+  }
 
-  h2 {
+  h2, h5 {
     color: var(--Slate-100);
     font-size: clamp(1rem, 0.648rem + 1.502vw, 2rem);
   }
@@ -19,7 +25,11 @@ export const FooterStyled = styled.footer`
     line-height: 1.5;
   }
 
-  @media (min-width: 768px) {
+  .completion-request {
+    text-align: center;
+  }
+
+  @media (min-width: 48em) {
     padding: 3em;
     gap: 1.5rem;
     border-radius: 0 2rem 2rem 4rem;
@@ -57,7 +67,7 @@ export const ResultStyled = styled.section`
     margin-bottom: 0.5em;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48em) {
     padding: 2em;
   }
 `;

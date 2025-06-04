@@ -5,7 +5,12 @@ export const MainStyled = styled.main`
   background-color: ${({ theme }) =>
     theme === "light" ? "var(--White)" : "var(--Slate-100)"};
   padding: 2em;
-  transition: background-color 0.3s ease;
+
+  @media (prefers-reduced-motion: no-preference) {
+  * {
+    transition: background-color 0.3s ease;
+  }
+}
 
   h1 {
     color: var(--Slate-900);
@@ -26,7 +31,7 @@ export const MainStyled = styled.main`
     margin-bottom: 2rem;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 48em) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
