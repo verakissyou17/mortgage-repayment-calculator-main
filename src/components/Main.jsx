@@ -10,7 +10,7 @@ function Main(props) {
     <MainStyled theme={theme}>
       <section className="header">
         <h1>Mortgage Calculator</h1>
-        <button className="clear" onClick={props.handleReset}>
+        <button type="button" className="clear" onClick={props.handleReset}>
           Clear All
         </button>
       </section>

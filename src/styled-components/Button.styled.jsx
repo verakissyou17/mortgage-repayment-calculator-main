@@ -9,9 +9,14 @@ export const ButtonStyled = styled.div`
   border-radius: 10rem;
   gap: 0.5rem;
   margin-top: 2em;
-  transition: all 0.3s ease-out;
   background-color: ${({ theme }) =>
     theme === "light" ? "var(--Lime)" : "var(--Slate-900)"};
+
+    @media (prefers-reduced-motion: no-preference) {
+  * {
+    transition: background-color 0.3s ease;
+  }
+}
 
   button[type="submit"] {
     background-color: ${({ theme }) =>

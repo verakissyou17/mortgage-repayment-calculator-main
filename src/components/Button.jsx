@@ -3,7 +3,7 @@ import proptypes from "prop-types";
 
 function Button(props) {
   return (
-    <ButtonStyled theme={props.theme} aria-label="Calculate Repayments">
+    <ButtonStyled theme={props.theme}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"

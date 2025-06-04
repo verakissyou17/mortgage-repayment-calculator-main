@@ -100,7 +100,6 @@ function Form(props) {
             value="repayment"
             checked={props.formValues.repaymentType === "repayment"}
             onChange={props.handleInputChange}
-            aria-label="Repayment"
           />
           <label htmlFor="repayment">Repayment</label>
         </RadioContainer>
@@ -112,7 +111,6 @@ function Form(props) {
             value="interest-only"
             checked={props.formValues.repaymentType === "interest-only"}
             onChange={props.handleInputChange}
-            aria-label="Interest only"
           />
           <label htmlFor="interest-only">Interest only</label>
         </RadioContainer>
